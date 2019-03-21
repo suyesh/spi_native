@@ -1,10 +1,10 @@
 import React from "react";
-import { Map, MainContainer, TopNav } from "./src/components";
+import { Map, MainContainer, TopBar } from "./src/components";
 
 const App = () => (
   <MainContainer>
-    <TopNav />
     <Map />
+    <TopBar />
   </MainContainer>
 );
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
+import { View } from "react-native";
 import { style } from "./containerStyle";
 
 export const MainContainer = ({ children }) => (
-  <SafeAreaView style={style.container}>{children}</SafeAreaView>
+  <View style={style.container}>{children}</View>
 );

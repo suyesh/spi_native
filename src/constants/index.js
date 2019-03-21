@@ -1,3 +1,6 @@
+import { Dimensions } from "react-native";
+import { Constants } from "expo";
+
 export const LOCATION_ACCESS_ERROR = "Permission to access location was denied";
 
 export const LOCATION_STATUS = {
@@ -17,3 +20,8 @@ export const MAPVIEW_DEFAULT_PROPS = {
   showsScale: false,
   showsIndoors: false
 };
+
+export const SCREEN_HEIGHT = Dimensions.get("window").height;
+export const SCREEN_WIDTH = Dimensions.get("window").width;
+
+export const TOP_MARGIN = Constants.statusBarHeight;
