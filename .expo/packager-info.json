@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 19691,
-  "expoServerNgrokUrl": "https://2v-rpv.suyeshb.spi-native.exp.direct",
-  "packagerNgrokUrl": "https://packager.2v-rpv.suyeshb.spi-native.exp.direct",
-  "ngrokPid": 19719,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
