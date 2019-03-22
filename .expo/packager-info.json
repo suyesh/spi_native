@@ -3,8 +3,8 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://2v-rpv.suyeshb.spi-native.exp.direct",
+  "packagerNgrokUrl": "https://packager.2v-rpv.suyeshb.spi-native.exp.direct",
+  "ngrokPid": 17550,
   "webpackServerPort": null
 }

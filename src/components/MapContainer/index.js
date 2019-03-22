@@ -6,7 +6,7 @@ import { withPosition } from "../../lib/withPosition";
 import { MAPVIEW_DEFAULT_PROPS } from "../../constants";
 import { style } from "./mapStyle";
 
-class MapBase extends Component {
+class MapContainerBase extends Component {
   render() {
     const { region } = this.props;
     const { PROVIDER_GOOGLE } = MapView;
@@ -19,7 +19,9 @@ class MapBase extends Component {
           style={style.map}
           region={region}
           {...MAPVIEW_DEFAULT_PROPS}
-        />
+        >
+          {this.props.children}
+        </MapView>
       );
     }
 
@@ -27,4 +29,4 @@ class MapBase extends Component {
   }
 }
 
-export const Map = withPosition(MapBase);
+export const MapContainer = withPosition(MapContainerBase);

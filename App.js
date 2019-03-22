@@ -1,11 +1,6 @@
 import React from "react";
-import { Map, MainContainer, TopBar } from "./src/components";
+import Main from "./src/Main";
 
-const App = () => (
-  <MainContainer>
-    <Map />
-    <TopBar />
-  </MainContainer>
-);
+const App = () => <Main />;
 
 export default App;
