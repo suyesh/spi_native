@@ -8,6 +8,8 @@ admin.initializeApp({
   databaseURL: "https://nycmaps-20a10.firebaseio.com"
 });
 const subwayLinesRef = admin.firestore().collection("nycSubwayLines");
+const subwayEntrancesRef = admin.firestore().collection("nycSubwayEntrances");
+const subwayStationsRef = admin.firestore().collection("nycSubwayStations");
 
 const subwayLines = JSON.parse(
   fs.readFileSync("./subwayLines.geojson", "utf8")
@@ -87,6 +89,9 @@ subwayStations &&
   });
 
 let lines = [];
+let entrances = [];
+let stations = [];
+
 subwayLinesRef.get().then(snapShot => {
   snapShot.forEach(doc => {
     lines = [
@@ -95,4 +100,24 @@ subwayLinesRef.get().then(snapShot => {
     ];
   });
   console.log(lines.length);
+});
+
+subwayEntrancesRef.get().then(snapShot => {
+  snapShot.forEach(doc => {
+    entrances = [
+      ...entrances,
+      doc.data().geometry.map(geom => [geom.longitude, geom.latitude])
+    ];
+  });
+  console.log(entrances.length);
+});
+
+subwayStationsRef.get().then(snapShot => {
+  snapShot.forEach(doc => {
+    stations = [
+      ...stations,
+      doc.data().geometry.map(geom => [geom.longitude, geom.latitude])
+    ];
+  });
+  console.log(stations.length);
 });
