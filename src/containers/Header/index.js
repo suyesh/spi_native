@@ -10,7 +10,7 @@ class Header extends Component {
   render() {
     return (
       <HeaderContainer>
-        <MenuButton />
+        <MenuButton {...this.props.navigation} />
         <HeaderSearchButton />
         <MyLocationButton />
       </HeaderContainer>
